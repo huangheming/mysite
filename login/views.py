@@ -73,6 +73,7 @@ def login(request):
                 message = "用户不存在！"
     else:
         login_form = forms.UserForm()
+
     return render(request, "login/login.html", locals())
 
 
