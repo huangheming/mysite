@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}注册确认{% endblock %}
+{% block content %}
+    <div class="row">
+        <h1 class="text-center">
+            {% if not code %}
+                请前往邮箱确认，以完成注册！
+            {% else %}
+                {{ message }}
+                {% if is_confirmed %}
+                    <script>
+                        window.setTimeout("window.location='/login/'",2000);
+                    </script>
+                {% endif %}
+            {% endif %}
+        </h1>
+    </div>
+
+{% endblock %}
