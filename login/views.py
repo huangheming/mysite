@@ -49,7 +49,6 @@ def index(request):
 def login(request):
     if request.session.get('is_login', None):
         return redirect("/index/")
-
     if request.method == "POST":
         login_form = forms.UserForm(request.POST)
         print(request.POST)
